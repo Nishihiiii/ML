@@ -192,6 +192,148 @@ h1, h2, h3 {
     color: var(--accent-color);
 }
 
+/* Контейнер профиля  */
+.profile-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* На мобильных профиль становится в одну колонку */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+}
+
+/* Левая колонка  */
+.profile-sidebar {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+    height: fit-content; 
+}
+
+.avatar-large img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color); 
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.role-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.rank-info {
+    font-size: 0.9rem;
+    color: var(--cream-color);
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+/* Светлая тема для разделителя */
+body.light-theme .divider {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.profile-achievements h3 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.achievements-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 2rem; 
+}
+
+/* Правая колонка (Контент) */
+.profile-content {
+    flex: 2;
+}
+
+.content-grid-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Горизонтальные карточки для списка статей */
+.horizontal-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Мини-профиль в шапке */
+.user-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.avatar-circle-small {
+    width: 35px;
+    height: 35px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
 /* Футер */
 footer {
     text-align: center;
@@ -199,4 +341,5 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 }
