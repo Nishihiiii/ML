@@ -1,0 +1,202 @@
+/* Основные переменные (Цвета из ТЗ) */
+:root {
+    --main-bg: #02143D;       /* Глубокий синий - 60% */
+    --card-bg: #165498;       /* Светло-голубой - 30% */
+    --accent-color: #D42426;  /* Насыщенный красный - 10% */
+    --text-color: #ffffff;    /* Текст светлый */
+    --cream-color: #F5F5DC;   /* Теплый кремовый (вспомогательный) */
+    
+    /* Шрифты из ТЗ */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Светлая тема  */
+body.light-theme {
+    --main-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #02143D;
+    --cream-color: #02143D;
+    border-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Шапка */
+header {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cream-color);
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--cream-color);
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Кнопки */
+button, .cta-button, .auth-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.cta-button, .auth-btn {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover, .auth-btn:hover {
+    opacity: 0.9;
+}
+
+/* Главный контент */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+/* Карточки  */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color); 
+}
+
+.tag {
+    font-size: 0.8rem;
+    color: var(--cream-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Форма регистрации */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    font-family: var(--font-body);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-link a {
+    color: var(--accent-color);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+    margin-top: auto;
+    font-size: 0.9rem;
+}
