@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя - MLBB Fan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">MLBB Fan</a></div>
+        <nav>
+            <a href="index.html">Публикации</a>
+            <a href="#">Гайды</a>
+            <a href="#">Аналитика</a>
+            <a href="#">Новости</a>
+        </nav>
+        <div class="header-controls">
+            <button id="theme-toggle">Сменить тему</button>
+            <div class="user-mini">
+                <span>AlexHost</span>
+                <div class="avatar-circle-small"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <aside class="profile-sidebar card">
+                <div class="profile-header">
+                    <div class="avatar-large">
+                        <img src="https://via.placeholder.com/150/165498/ffffff?text=AH" alt="Аватар">
+                    </div>
+                    <h2>AlexHost</h2>
+                    <p class="role-badge">Автор</p>
+                    <p class="rank-info">Ранг: Мифическая слава (52 звезды)</p>
+                </div>
+                
+                <hr class="divider">
+
+                <div class="profile-details">
+                    <p><strong>ID Аккаунта:</strong> 123456789</p>
+                    <p><strong>Регистрация:</strong> 12.01.2025</p>
+                    <p><strong>Email:</strong> alex@example.com</p>
+                </div>
+
+                <div class="profile-achievements">
+                    <h3>Достижения</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement" title="Автор года">🏆</div>
+                        <div class="achievement" title="Эксперт по магам">🧙‍♂️</div>
+                        <div class="achievement" title="Активный комментатор">💬</div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="profile-content">
+                <h2>Мои публикации</h2>
+                
+                <div class="content-grid-profile">
+                    <article class="card horizontal-card">
+                        <div class="card-info">
+                            <h3>Полный гайд на Ксавьера</h3>
+                            <p>Позиционирование в лейт-гейме и сборки.</p>
+                            <span class="tag">Гайды</span>
+                            <span class="date">Опубликовано: Вчера</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="edit-btn">Редактировать</button>
+                        </div>
+                    </article>
+
+                    <article class="card horizontal-card">
+                        <div class="card-info">
+                            <h3>Анализ меты M5</h3>
+                            <p>Почему саппорты-хилеры снова в бане?</p>
+                            <span class="tag">Аналитика</span>
+                            <span class="date">Опубликовано: 10.01.2025</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="edit-btn">Редактировать</button>
+                        </div>
+                    </article>
+                </div>
+
+                <h2 style="margin-top: 30px;">Избранное</h2>
+                <div class="content-grid-profile">
+                    <article class="card horizontal-card">
+                        <div class="card-info">
+                            <h3>Новости патча 1.8.44</h3>
+                            <p>Автор: OfficialMoonton</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MLBB Fan Site.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
