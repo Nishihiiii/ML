@@ -238,14 +238,6 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-/* На мобильных профиль становится в одну колонку */
-@media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column;
-    }
-}
-
-/* Левая колонка  */
 .profile-sidebar {
     flex: 1;
     text-align: center;
@@ -507,6 +499,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
