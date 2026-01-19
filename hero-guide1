@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайд на Layla - ML Guides</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="hero-guide.html">MLBB Fan</a></div>
+        <nav>
+            <a href="index.html">Публикации</a>
+            <a href="#">Гайды</a>
+            <a href="#">Аналитика</a>
+            <a href="#">Новости</a>
+        </nav>
+        <div class="header-controls">
+            <button id="theme-toggle">Сменить тему</button>
+             <a href="login.html" class="auth-btn">Войти</a>
+        </div>
+    </header>
+
+    <main class="guide-detail">
+        <section class="hero-header">
+            <img src="LaylaFull" alt="Layla Full Art" class="hero-full-img">
+            <div class="hero-info">
+                <h1>Тигрилл</h1>
+                <p class="role">Роль: Танк</p>
+                <p class="desc">Герой-инициатор, обладает контролем, который может перевернуть ход всей игры.</p>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Механики и Геймплей</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h2>Комментарии</h2>
+            
+            <div class="comment-form">
+                <textarea id="comment-input" placeholder="Напишите ваш совет по герою..."></textarea>
+                <button id="submit-comment">Отправить</button>
+            </div>
+
+            <div id="comments-list" class="comments-list">
+                <div class="comment">
+                    <strong>Admin</strong>
+                    <p>Не забывайте фармить в начале игры!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MLBB Fan Site.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
