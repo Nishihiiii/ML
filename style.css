@@ -412,10 +412,7 @@ body.light-theme .divider {
     width: 600px !important;
     height: auto;
     border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    }
 
 .video-container {
     position: relative;
@@ -505,6 +502,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
