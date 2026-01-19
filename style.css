@@ -287,7 +287,7 @@ h1, h2, h3 {
     margin: 20px 0;
 }
 
-/* Светлая тема для разделителя */
+
 body.light-theme .divider {
     background: rgba(0, 0, 0, 0.1);
 }
@@ -311,7 +311,7 @@ body.light-theme .divider {
     font-size: 2rem; 
 }
 
-/* Правая колонка (Контент) */
+
 .profile-content {
     flex: 2;
 }
@@ -322,7 +322,6 @@ body.light-theme .divider {
     gap: 15px;
 }
 
-/* Горизонтальные карточки для списка статей */
 .horizontal-card {
     display: flex;
     justify-content: space-between;
@@ -372,8 +371,10 @@ body.light-theme .divider {
     height: 35px;
     background-color: var(--accent-color);
     border-radius: 50%;
+    background-image: url('image4.jpg');
+    background-size: cover;
+    background-position: center;
 }
-/* --- Стили для страницы списка героев (guides.html) --- */
 .guides-container {
     padding: 2rem;
     text-align: center;
@@ -506,6 +507,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
