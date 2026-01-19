@@ -509,6 +509,14 @@ footer {
 
 }
 
+.profile-sidebar, .profile-content, .card, .hero {
+    transition: none !important;
+    min-height: 400px;
+}
+* {
+    transition-property: color, background-color !important;
+}
+
 
 
 
