@@ -409,7 +409,7 @@ body.light-theme .divider {
 }
 
 .hero-full-img {
-    width: 500px !important;
+    width: 600px !important;
     height: auto;
     border-radius: 10px;
 }
@@ -502,6 +502,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
