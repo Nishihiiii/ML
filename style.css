@@ -438,6 +438,11 @@ body.light-theme .divider {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+.hero img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 body.dark-mode .hero-card {
     background: #2c2c2c;
     border-color: #444;
@@ -463,5 +468,6 @@ footer {
     font-size: 0.9rem;
 
 }
+
 
 
