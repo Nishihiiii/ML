@@ -394,7 +394,6 @@ body.light-theme .divider {
     border-radius: 5px;
 }
 
-/* --- Стили для страницы гайда (hero-guide.html) --- */
 .guide-detail {
     max-width: 800px;
     margin: 0 auto;
@@ -429,6 +428,15 @@ body.light-theme .divider {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.guides-container main {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding-top: 0;
+}
+
+.heroes-grid {
+    margin-top: 40px;
 }
 
 /* --- Комментарии --- */
@@ -494,6 +502,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
