@@ -448,8 +448,22 @@ body.light-theme .divider {
 .heroes-grid {
     margin-top: 40px;
 }
+.hero-card h3, 
+.hero-card p {
+    color: #1a1a1a !important; 
+}
 
-/* --- Комментарии --- */
+.hero-card {
+    background: #f4f4f4 !important; 
+    text-decoration: none; 
+}
+
+
+.hero-card:hover h3, 
+.hero-card:hover p {
+    color: #000000 !important;
+}
+
 .comments-section {
     margin-top: 40px;
     border-top: 1px solid #ccc;
@@ -463,8 +477,9 @@ body.light-theme .divider {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background: #ffffff !important;
-    color: #222222 !important; 
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    border: 1px solid #ccc !important;
 }
 
 .comment-form button {
@@ -485,10 +500,11 @@ body.light-theme .divider {
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    color: #222222 !important;
+    background-color: #eeeeee !important;
+    color: #1a1a1a !important;
 }
 .comment h4, .comment p {
-    color: #333;
+    color: #1a1a1a !important;
 }
 .hero img {
     display: block;
@@ -518,6 +534,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
