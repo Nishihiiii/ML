@@ -375,11 +375,11 @@ body.light-theme .divider {
 }
 
 .hero-card {
-    background: var(--bg-card, #f4f4f4); /* Цвет карточки */
+    background: var(--bg-card, #f4f4f4);
     padding: 15px;
     border-radius: 10px;
     text-decoration: none;
-    color: inherit;
+    color: var(--main-bg); 
     transition: transform 0.3s;
     border: 1px solid #ccc;
 }
@@ -453,6 +453,7 @@ body.light-theme .divider {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    color: #333;
 }
 
 .comment-form button {
@@ -473,6 +474,10 @@ body.light-theme .divider {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    color: #333;
+}
+.comment h4, .comment p {
+    color: #333;
 }
 .hero img {
     display: block;
@@ -502,6 +507,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
