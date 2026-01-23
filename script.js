@@ -25,34 +25,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
     
-    const commentsList = document.getElementById('comments-list');
-    const submitBtn = document.getElementById('submit-comment');
-    const commentInput = document.getElementById('comment-input');
 
-    if (commentsList && submitBtn) {
-       
-        const saved = JSON.parse(localStorage.getItem('pageComments')) || [];
-        saved.forEach(c => renderComment(c.name, c.text));
-
-       
-        submitBtn.addEventListener('click', () => {
-            const text = commentInput.value.trim();
-            if (text) {
-                renderComment('Гость', text);
-                const current = JSON.parse(localStorage.getItem('pageComments')) || [];
-                current.push({ name: 'Гость', text });
-                localStorage.setItem('pageComments', JSON.stringify(current));
-                commentInput.value = '';
-            }
-        });
-    }
-
-    function renderComment(name, text) {
-        const div = document.createElement('div');
-        div.classList.add('comment');
-        div.innerHTML = `<strong>${name}</strong><p>${text}</p>`;
-        commentsList.prepend(div);
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('submit-comment');
+    const input = document.getElementById('comment-input');
+    const list = document.getElementById('comments-list');
+    
+    if (!btn || !input || !list) return;
+    
+    btn.addEventListener('click', function() {
+        const text = input.value.trim();
+        if (!text) return;
+        
+        const comment = document.createElement('div');
+        comment.className = 'comment';
+        comment.innerHTML = `
+            <strong>Гость</strong>
+            <p>${text}</p>
+        `;
+        
+        list.prepend(comment);
+        input.value = '';
+        
+ 
+        let comments = JSON.parse(localStorage.getItem('simpleComments')) || [];
+        comments.unshift({text: text, author: 'Гость', date: new Date().toLocaleString()});
+        localStorage.setItem('simpleComments', JSON.stringify(comments.slice(0, 50))); 
+    });
+    
+    
+    const saved = JSON.parse(localStorage.getItem('simpleComments')) || [];
+    saved.forEach(c => {
+        const comment = document.createElement('div');
+        comment.className = 'comment';
+        comment.innerHTML = `<strong>${c.author}</strong><p>${c.text}</p>`;
+        list.appendChild(comment);
+    });
 });
 
 
