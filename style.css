@@ -12,15 +12,46 @@
     --font-body: 'Montserrat', sans-serif;
 }
 
-/* Светлая тема  */
+
 body.light-theme {
-    --main-bg: #f0f2f5;
-    --card-bg: #ffffff;
-    --text-color: #02143D;
-    --cream-color: #02143D;
-    border-color: #ccc;
-    --bg-card-hero: #ffffff;
-    --text-card-hero: #02143D;
+    --main-bg: #f0f2f5;         
+    --card-bg: #ffffff;        
+    --text-color: #1a1a1a;     
+    --header-bg: #ffffff;      
+    --nav-text: #333333;        
+    --accent-color: #2a52be;    
+    --footer-bg: #e4e6eb;        
+    --sidebar-bg: #ffffff;        
+    --border-color: #dddddd;     
+}
+
+
+body.light-theme {
+    background-color: var(--main-bg);
+    color: var(--text-color);
+}
+
+body.light-theme header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.light-theme .post-card, 
+body.light-theme .hero, 
+body.light-theme .sidebar-block,
+body.light-theme .comment {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+body.light-theme footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+}
+
+body.light-theme nav a {
+    color: var(--nav-text);
 }
 
 * {
@@ -530,6 +561,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
