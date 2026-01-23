@@ -493,6 +493,8 @@ body.light-theme .divider {
 
 /* Кнопка */
 .comment-form button {
+    display: block !important;    
+    margin-bottom: 30px !important; 
     padding: 10px 25px;
     background: linear-gradient(45deg, #007bff, #0056b3); 
     border: none;
@@ -558,6 +560,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
