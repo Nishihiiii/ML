@@ -259,6 +259,7 @@ h1, h2, h3 {
 }
 
 /* Форма регистрации */
+
 .auth-container {
     display: flex;
     justify-content: center;
@@ -756,6 +757,7 @@ body.light-theme footer {
     color: #212529 !important;
     border-top: 3px solid #D42426 !important;
 }
+
 
 
 
