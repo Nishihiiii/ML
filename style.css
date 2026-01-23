@@ -465,48 +465,70 @@ body.light-theme .divider {
 .hero-card:hover p {
     color: #000000 !important;
 }
-
 .comments-section {
     margin-top: 40px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
+    font-family: 'Segoe UI', Roboto, sans-serif; 
 }
 
+/* Поле ввода */
 .comment-form textarea {
- width: 100%;
-    height: 80px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
-    border: 1px solid #ccc !important;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    color: #ffffff !important; 
+    outline: none;
+    transition: 0.3s;
 }
 
+.comment-form textarea:focus {
+    border-color: #007bff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Кнопка */
 .comment-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px 25px;
+    background: linear-gradient(45deg, #007bff, #0056b3); 
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s;
 }
 
-.comments-list {
-    margin-top: 20px;
+.comment-form button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
+
 
 .comment {
-    background: #eeeeee !important;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #eeeeee !important;
-    color: #1a1a1a !important;
+    background: rgba(255, 255, 255, 0.07) !important; 
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #007bff; 
+    color: #ffffff !important;
 }
-.comment h4, .comment p {
-    color: #1a1a1a !important;
+
+.comment h4 {
+    color: #007bff !important;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.comment p {
+    color: #e0e0e0 !important;
+    line-height: 1.5;
 }
 .hero img {
     display: block;
@@ -536,6 +558,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
