@@ -378,27 +378,30 @@ body.light-theme .divider {
     margin-top: 20px;
 }
 
+/* Карточки героев */
 .hero-card {
-    background: rgba(255, 255, 255, 0.05); 
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.05) !important; 
+    backdrop-filter: blur(15px) !important;        
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 15px;
     text-decoration: none;
-    color: #fff !important; 
+    color: #ffffff !important; 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: block; 
 }
-.hero-card span, 
+
+.hero-card h3, 
 .hero-card p, 
-.hero-card div {
-    color: #222222 !important;
+.hero-card span {
+    color: #ffffff !important; 
 }
 
 .hero-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .hero-card img {
@@ -449,22 +452,7 @@ body.light-theme .divider {
 
 .heroes-grid {
     margin-top: 40px;
-}
-.hero-card h3, 
-.hero-card p {
-    color: #1a1a1a !important; 
-}
 
-.hero-card {
-    background: #f4f4f4 !important; 
-    text-decoration: none; 
-}
-
-
-.hero-card:hover h3, 
-.hero-card:hover p {
-    color: #000000 !important;
-}
 .comments-section {
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -493,8 +481,8 @@ body.light-theme .divider {
 
 /* Кнопка */
 .comment-form button {
-    display: block !important;    
-    margin-bottom: 30px !important; 
+    display: inline-block !important;
+    margin-bottom: 40px !important; 
     padding: 10px 25px;
     background: linear-gradient(45deg, #007bff, #0056b3); 
     border: none;
@@ -560,6 +548,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
