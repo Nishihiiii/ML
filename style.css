@@ -231,7 +231,33 @@ button, .cta-button, .auth-btn {
     text-align: center;
     margin-bottom: 3rem;
 }
+.auth-form a[href*="profile.html"] {
+    display: none !important;
+}
 
+.auth-form .cta-button {
+    all: unset !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 16px !important;
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    font-family: var(--font-body) !important;
+    transition: all 0.3s !important;
+}
+
+.auth-form .cta-button:hover {
+    background: #ff3333 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 7px 20px rgba(212, 36, 38, 0.4) !important;
+}
 h1, h2, h3 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
@@ -618,7 +644,7 @@ body.light-theme .divider {
 
 .heroes-grid {
     margin-top: 40px;
-
+}
 .comments-section {
     width: 100%;
     margin-top: 40px;
@@ -637,7 +663,7 @@ body.light-theme .divider {
 }
 
 .comment-form textarea {
-    width: 100%;
+    width: 100% !important;
     min-height: 120px;
     padding: 15px;
     border-radius: 10px;
@@ -647,6 +673,7 @@ body.light-theme .divider {
     font-family: var(--font-body);
     font-size: 1rem;
     resize: vertical;
+    box-sizing: border-box !important;
 }
 
 .comment-btn {
@@ -681,11 +708,8 @@ body.light-theme .divider {
     border-radius: 10px;
     border-left: 5px solid var(--accent-color);
     margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .comment strong {
@@ -704,6 +728,7 @@ body.light-theme .divider {
     font-size: 1rem;
     white-space: pre-wrap;
     word-break: break-word;
+    width: 100%;
 }
 
 /* Для светлой темы */
@@ -722,12 +747,10 @@ body.light-theme .comment strong {
     color: #495057;
 }
 
-
 body.light-theme .comment p {
     color: #212529;
 }
 
-    
 .hero img {
     display: block;
     margin-left: auto;
@@ -737,30 +760,45 @@ body.light-theme .comment p {
 
 
 
+
 /* ФУТЕР */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 40px;
+}
+
 footer {
-    background-color: #165498 !important; 
-    color: #ffffff !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    height: auto !important;
-    min-height: 80px !important;
+    background: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    text-align: center !important;
+    padding: 25px 20px !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    border-top: 3px solid var(--accent-color) !important;
     position: relative !important;
-    z-index: 1000 !important;
+    z-index: 100 !important;
+    flex-shrink: 0;
 }
 
-/* Для светлой темы */
 body.light-theme footer {
-    background-color: #ffffff !important;
+    background: #ffffff !important;
     color: #212529 !important;
-    border-top: 3px solid #D42426 !important;
+    border-top: 3px solid var(--accent-color) !important;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
 }
-
-
-
-
 
 
 
