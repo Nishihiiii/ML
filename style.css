@@ -762,32 +762,24 @@ body.light-theme .comment p {
 /* ФУТЕР */
 /* ЭТО ИСПРАВИТ ВСЕ ПРОБЛЕМЫ С ПОДВАЛОМ */
 footer {
-    all: unset;
-    display: block;
-    width: 100%;
-    background: var(--card-bg);
-    color: var(--text-color);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-    border-top: 3px solid var(--accent-color);
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 100;
+    background-color: #165498 !important; /* ваш синий цвет */
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 80px !important;
+    position: relative !important;
+    z-index: 1000 !important;
 }
 
+/* Для светлой темы */
 body.light-theme footer {
-    background: #ffffff;
-    color: #212529;
-    border-top: 3px solid var(--accent-color);
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-top: 3px solid #D42426 !important;
 }
 
-footer p {
-    margin: 0;
-    padding: 5px 0;
-    font-size: 1rem;
-}
 
 
 
