@@ -522,22 +522,7 @@ body.light-theme .divider {
     margin-left: auto;
     margin-right: auto;
 }
-body.dark-mode .hero-card {
-    background: #2c2c2c;
-    border-color: #444;
-    color: #fff;
-}
 
-body.dark-mode .comment {
-    background: #333;
-    color: #fff;
-}
-
-body.dark-mode .comment-form textarea {
-    background: #444;
-    color: #fff;
-    border-color: #555;
-}
 /* Футер */
 footer {
     text-align: center;
@@ -545,6 +530,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
