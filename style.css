@@ -460,7 +460,7 @@ body.light-theme .divider {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     margin-bottom: 30px;
@@ -489,44 +489,46 @@ body.light-theme .divider {
     font-family: 'Segoe UI', Roboto, sans-serif; 
 }
 
-/* Поле ввода */
 .comment-form textarea {
-    background: rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px !important;
     color: white !important;
     padding: 15px !important;
     font-family: 'Inter', sans-serif;
     resize: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 .comment-form {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 15px;
-    margin-bottom: 40px; 
-}
-.comment-form textarea:focus {
-    border-color: #007bff !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 40px;
 }
 
+.comment-form textarea:focus {
+    border-color: #007bff !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
 /* Кнопка */
 .comment-form button {
-    align-self: flex-start; 
-    padding: 12px 30px !important;
-    background: var(--accent-color) !important;
-    border-radius: 8px !important;
-    color: white !important;
-    text-transform: uppercase;
-    font-family: 'Unbounded', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    margin-bottom: 50px !important;
+    align-self: flex-start;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .comment-form button:hover {
-    transform: translateY(-2px); 
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    background: #0056b3;
 }
 
 
@@ -561,6 +563,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
