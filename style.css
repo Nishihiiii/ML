@@ -11,98 +11,53 @@
     --font-heading: 'Merriweather', serif;
     --font-body: 'Montserrat', sans-serif;
 }
-html {
-    font-size: 16px;
-}
 
-@media (max-width: 768px) {
-    html {
-        font-size: 14px;
-    }
-    
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .profile-container {
-        flex-direction: column;
-    }
-    
-    .heroes-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    nav a {
-        margin: 0 5px;
-    }
-}
 
-@media (max-width: 480px) {
-    html {
-        font-size: 12px;
-    }
-    
-    .heroes-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    header {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 15px;
-    }
-    
-    .header-controls {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
 body.light-theme {
-    --main-bg: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #212529;
-    --accent-color: #2a52be;
-    --cream-color: #495057;
+    --main-bg: #f0f2f5;         
+    --card-bg: #ffffff;        
+    --text-color: #1a1a1a;     
+    --header-bg: #ffffff;      
+    --nav-text: #333333;        
+    --accent-color: #2a52be;    
+    --footer-bg: #e4e6eb;        
+    --sidebar-bg: #ffffff;        
+    --border-color: #dddddd;     
 }
 
-body.light-theme::before {
-    filter: blur(10px) brightness(1.2) !important;
-    background-color: rgba(240, 242, 245, 0.9);
+
+body.light-theme {
+    background-color: var(--main-bg);
+    color: var(--text-color);
 }
 
-body.light-theme main {
-    background-color: rgba(248, 249, 250, 0.85) !important;
+body.light-theme header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
 }
 
-body.light-theme .card {
+body.light-theme .post-card, 
+body.light-theme .hero, 
+body.light-theme .sidebar-block,
+body.light-theme .comment {
     background-color: var(--card-bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
-body.light-theme .hero-card {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border: 1px solid #dee2e6 !important;
-}
-
-body.light-theme .hero-card h3 {
-    color: #212529 !important;
-}
-
-body.light-theme .hero-card p {
-    color: var(--accent-color) !important;
-}
 body.light-theme footer {
-    background-color: #e9ecef;
-    color: #212529;
-    border-top: 1px solid #dee2e6;
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+}
+
+body.light-theme nav a {
+    color: var(--nav-text);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -231,33 +186,7 @@ button, .cta-button, .auth-btn {
     text-align: center;
     margin-bottom: 3rem;
 }
-.auth-form a[href*="profile.html"] {
-    display: none !important;
-}
 
-.auth-form .cta-button {
-    all: unset !important;
-    display: block !important;
-    width: 100% !important;
-    padding: 16px !important;
-    background: var(--accent-color) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 10px !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    margin-top: 20px !important;
-    font-family: var(--font-body) !important;
-    transition: all 0.3s !important;
-}
-
-.auth-form .cta-button:hover {
-    background: #ff3333 !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 7px 20px rgba(212, 36, 38, 0.4) !important;
-}
 h1, h2, h3 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
@@ -285,120 +214,51 @@ h1, h2, h3 {
 }
 
 /* Форма регистрации */
-
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    padding: 40px 20px;
 }
 
-.auth-form .cta-button {
-    all: unset !important;
-    display: block !important;
-    width: 100% !important;
-    padding: 16px !important;
-    background: var(--accent-color) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 10px !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    margin-top: 20px !important;
-    font-family: var(--font-body) !important;
-    transition: all 0.3s !important;
-    box-sizing: border-box !important;
-    line-height: normal !important;
-    min-height: 50px !important;
-}
-
-.auth-form .cta-button:hover {
-    background: #ff3333 !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 7px 20px rgba(212, 36, 38, 0.4) !important;
+.auth-form {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .form-group {
-    margin-bottom: 25px;
-    width: 100%;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--cream-color);
-    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
 .form-group input {
     width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
     font-family: var(--font-body);
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
 }
-.form-group input:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    background: rgba(255, 255, 255, 0.15);
-}
+
 .full-width {
     width: 100%;
     margin-top: 10px;
 }
 
 .auth-link {
-    margin-top: 25px;
+    margin-top: 15px;
     text-align: center;
-    font-size: 0.95rem;
-    color: var(--cream-color);
+    font-size: 0.9rem;
 }
+
 .auth-link a {
     color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 5px;
-}
-.auth-link a:hover {
-    text-decoration: underline;
-}
-
-body.light-theme .auth-form {
-    background-color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #dee2e6;
-}
-
-body.light-theme .auth-form h2 {
-    color: #212529;
-}
-
-body.light-theme .form-group label {
-    color: #495057;
-}
-
-body.light-theme .form-group input {
-    background: #f8f9fa;
-    border: 2px solid #ced4da;
-    color: #212529;
-}
-
-body.light-theme .form-group input:focus {
-    border-color: var(--accent-color);
-    background: white;
-}
-
-body.light-theme .auth-link {
-    color: #6c757d;
 }
 
 /* Контейнер профиля  */
@@ -551,44 +411,31 @@ body.light-theme .divider {
 
 /* Карточки героев */
 .hero-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 20px;
+.hero-card {
+    background: rgba(255, 255, 255, 0.05) !important; 
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    transition: all 0.3s ease;
     text-align: center;
-    text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
-    display: block;
-    overflow: hidden;
-}
-
-.hero-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-    text-decoration: none;
-}
-
-.hero-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
 
 .hero-card h3 {
-    color: white;
-    font-family: var(--font-heading);
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
+    font-family: 'Unbounded', sans-serif !important; 
+    color: #ffffff !important;
+    margin-top: 15px;
 }
 
 .hero-card p {
-    color: var(--accent-color);
-    font-weight: 600;
+    color: var(--accent-color) !important;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem;
-    margin: 0;
+}
+.hero-card img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 .guide-detail {
@@ -613,7 +460,7 @@ body.light-theme .divider {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     margin-bottom: 30px;
@@ -634,191 +481,86 @@ body.light-theme .divider {
 
 .heroes-grid {
     margin-top: 40px;
-}
+
 .comments-section {
-    width: 100%;
     margin-top: 40px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-family: 'Segoe UI', Roboto, sans-serif; 
 }
 
+/* Поле ввода */
+.comment-form textarea {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    padding: 15px !important;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+}
 .comment-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 15px;
-    margin-bottom: 30px;
-    width: 100%;
+    margin-bottom: 40px; 
+}
+.comment-form textarea:focus {
+    border-color: #007bff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.comment-form textarea {
-    width: 100% !important;
-    min-height: 120px;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    resize: vertical;
-    box-sizing: border-box !important;
+/* Кнопка */
+.comment-form button {
+    align-self: flex-start; 
+    padding: 12px 30px !important;
+    background: var(--accent-color) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    text-transform: uppercase;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 50px !important;
 }
 
-.comment-btn {
-    align-self: flex-start;
-    padding: 14px 40px;
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s;
+.comment-form button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
-.comment-btn:hover {
-    background: #ff3333;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 36, 38, 0.4);
-}
-
-.comments-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
 
 .comment {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid var(--accent-color);
-    margin-bottom: 20px;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+    border-left: 4px solid var(--accent-color) !important;
 }
-
-.comment strong {
-    color: var(--cream-color);
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: inline;
-    margin-right: 10px;
+.comment h4 {
+    color: #ffffff !important;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
 .comment p {
-    margin: 12px 0 0 0;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    font-size: 1rem;
-    white-space: pre-wrap;
-    word-break: break-word;
-    width: 100%;
+    color: #b0bccf !important;
+    font-family: 'Inter', sans-serif;
 }
-
-/* Для светлой темы */
-body.light-theme .comment-form textarea {
-    background: rgba(0, 0, 0, 0.05);
-    border: 2px solid #ced4da;
-    color: #212529;
-}
-
-body.light-theme .comment {
-    background: rgba(0, 0, 0, 0.03);
-    border-left: 5px solid var(--accent-color);
-}
-
-body.light-theme .comment strong {
-    color: #495057;
-}
-
-body.light-theme .comment p {
-    color: #212529;
-}
-
 .hero img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-
-
-
-/* ФУТЕР */
+/* Футер */
 footer {
-    all: unset;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    background: var(--card-bg);
-    color: var(--text-color);
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 100;
-    border-top: 3px solid var(--accent-color);
-}
-
-footer > * {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 1200px;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    padding: 5px 0;
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
-}
-
-/* Для светлой темы */
-body.light-theme footer {
-    background: #ffffff;
-    color: #212529;
-    border-top: 3px solid var(--accent-color);
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    flex: 1;
-}
-
-body::after {
-    content: '';
-    flex: 1;
-}
-body::before {
-    z-index: -2;
-}
-
-
-
-
-
+    padding: 20px;
+    background-color: var(--card-bg);
+    margin-top: auto;
+    font-size: 0.9rem;
 
 
 
