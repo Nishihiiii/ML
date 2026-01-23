@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Скрипт запущен"); 
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
     }
-
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             body.classList.toggle('light-theme');
@@ -17,38 +17,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === ЛОГИКА КОММЕНТАРИЕВ (из вашего файла) ===
     const submitBtn = document.getElementById('submit-comment');
     const commentInput = document.getElementById('comment-input');
     const commentsList = document.getElementById('comments-list');
-
-    // Функции для комментариев
     function addComment(name, text) {
         const div = document.createElement('div');
         div.classList.add('comment');
         div.innerHTML = `<strong>${name}</strong><p>${text}</p>`;
         commentsList.prepend(div);
     }
+
     function saveComment(name, text) {
         let comments = JSON.parse(localStorage.getItem('pageComments')) || [];
         comments.push({ name, text });
         localStorage.setItem('pageComments', JSON.stringify(comments));
     }
+
     function loadComments() {
         let comments = JSON.parse(localStorage.getItem('pageComments')) || [];
         comments.forEach(c => addComment(c.name, c.text));
     }
-    if (submitBtn && commentInput && commentsList) {
+
+    if (commentsList && submitBtn && commentInput) {
         loadComments();
 
         submitBtn.addEventListener('click', () => {
             const text = commentInput.value.trim();
             if (text) {
-                addComment('Гость', text); 
+                addComment('Гость', text);
                 saveComment('Гость', text);
                 commentInput.value = '';
             } else {
-                alert('Пожалуйста, введите текст комментария.');
+                alert('Введите текст комментария!');
             }
         });
     }
