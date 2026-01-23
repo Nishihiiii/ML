@@ -294,43 +294,33 @@ h1, h2, h3 {
     padding: 40px 20px;
 }
 
-.auth-form {
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.auth-form h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--text-color);
-    font-family: var(--font-heading);
-    font-size: 2rem;
-}
 .auth-form .cta-button {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    background: var(--accent-color);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    border: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-top: 10px;
+    all: unset !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 16px !important;
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    font-family: var(--font-body) !important;
+    transition: all 0.3s !important;
+    box-sizing: border-box !important;
+    line-height: normal !important;
+    min-height: 50px !important;
 }
+
 .auth-form .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(212, 36, 38, 0.4);
-    text-decoration: none;
+    background: #ff3333 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 7px 20px rgba(212, 36, 38, 0.4) !important;
 }
+
 .form-group {
     margin-bottom: 25px;
     width: 100%;
@@ -824,6 +814,7 @@ body::after {
 body::before {
     z-index: -2;
 }
+
 
 
 
