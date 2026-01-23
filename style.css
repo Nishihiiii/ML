@@ -24,7 +24,9 @@ body.light-theme {
     --sidebar-bg: #ffffff;        
     --border-color: #dddddd;     
 }
-
+body.light-theme main {
+    background-color: rgba(240, 242, 245, 0.7); 
+}
 
 body.light-theme {
     background-color: var(--main-bg);
@@ -569,6 +571,7 @@ footer {
     background-color: var(--card-bg);
     margin-top: auto;
     font-size: 0.9rem;
+
 
 
 
