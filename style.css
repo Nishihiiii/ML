@@ -596,7 +596,7 @@ body.light-theme .divider {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     margin-bottom: 30px;
@@ -679,55 +679,32 @@ body.light-theme .divider {
     padding: 20px;
     border-radius: 10px;
     border-left: 5px solid var(--accent-color);
+    margin-bottom: 20px;
     width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .comment strong {
-    display: block;
-    margin-bottom: 10px;
     color: var(--cream-color);
     font-size: 1.1rem;
     font-weight: 600;
+    display: inline;
+    margin-right: 10px;
 }
 
 .comment p {
-    margin: 0;
-    line-height: 1.6;
+    margin: 12px 0 0 0;
+    padding: 0;
     color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
-/* Для светлой темы */
-body.light-theme .comments-section {
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid #dee2e6;
-}
-
-body.light-theme .comment-form textarea {
-    background: #f8f9fa;
-    border: 2px solid #ced4da;
-    color: #212529;
-}
-
-body.light-theme .comment {
-    background: rgba(0, 0, 0, 0.03);
-    border-left: 5px solid var(--accent-color);
-}
-
-body.light-theme .comment strong {
-    color: #495057;
-}
-
-body.light-theme .comment p {
-    color: #212529;
-}
-   
-.guide-detail {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-}
-    
 /* Для светлой темы */
 body.light-theme .comment-form textarea {
     background: rgba(0, 0, 0, 0.05);
@@ -760,9 +737,9 @@ body.light-theme .comment p {
 
 
 /* ФУТЕР */
-/* ЭТО ИСПРАВИТ ВСЕ ПРОБЛЕМЫ С ПОДВАЛОМ */
+
 footer {
-    background-color: #165498 !important; /* ваш синий цвет */
+    background-color: #165498 !important; 
     color: #ffffff !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -779,6 +756,7 @@ body.light-theme footer {
     color: #212529 !important;
     border-top: 3px solid #D42426 !important;
 }
+
 
 
 
