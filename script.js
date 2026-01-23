@@ -1,30 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
-
-    // 1. ПРОВЕРКА ТЕМЫ
+    
+    // Проверка темы
     if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-theme');
+        themeBtn.textContent = 'Темная тема';
+    } else {
+        themeBtn.textContent = 'Светлая тема';
     }
-
+    
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             body.classList.toggle('light-theme');
-            localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+            
+            if (body.classList.contains('light-theme')) {
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = 'Темная тема';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = 'Светлая тема';
+            }
         });
     }
-
-    // 2. ЛОГИКА КОММЕНТАРИЕВ (вынесена отдельно, чтобы ничего не ломалось)
+});
+    
     const commentsList = document.getElementById('comments-list');
     const submitBtn = document.getElementById('submit-comment');
     const commentInput = document.getElementById('comment-input');
 
     if (commentsList && submitBtn) {
-        // Загрузка
+       
         const saved = JSON.parse(localStorage.getItem('pageComments')) || [];
         saved.forEach(c => renderComment(c.name, c.text));
 
-        // Клик
+       
         submitBtn.addEventListener('click', () => {
             const text = commentInput.value.trim();
             if (text) {
@@ -44,4 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
         commentsList.prepend(div);
     }
 });
+
 
